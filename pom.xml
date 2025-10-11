@@ -29,5 +29,14 @@
 	</dependencies>
 	<build>
 		<finalName>HostelManagementSystem</finalName>
-	</build>
+	<plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.4.0</version>
+        <configuration>
+          <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  	</build>
 </project>
