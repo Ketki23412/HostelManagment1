@@ -29,6 +29,17 @@
 	</dependencies>
 	<build>
 		<finalName>HostelManagementSystem</finalName>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Use a recent version -->
+                <configuration>
+                    <source>1.8</source> <!-- Or 1.7, 11, 17, etc. based on your JDK -->
+                    <target>1.8</target> <!-- Must match the source version -->
+                </configuration>
+            </plugin>
+        </plugins>
 	<plugins>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
