@@ -37,7 +37,7 @@ pipeline {
                     script {
                    sh '''
                 docker rm -f  hostel_container || true
-                docker run -d --name hostel_container -p 9000:8080 -t hostel-managment-app
+                docker run -d --name hostel_container -p 9000:8080 -t hostel-managment-app:latest
                           '''                       
                     }
                 }
