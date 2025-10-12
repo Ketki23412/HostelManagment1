@@ -21,10 +21,17 @@ pipeline {
             }
             stage('Build Docker Image') {
                 steps {
-                    sh 'docker build -t hostel-managment-app .'
+                  script{ 
+                        withDockerRegistry(credentialsId:'docker', toolname:'docker'){
+                    sh '''
+                    docker build -t hostel-managment-app .
+                    docker tag hostel-managment-app ketki123/hostel-managment-app:latest
+                    docker push ketki123/hostel-managment-app:latest
+                    '''                          '
+                        }
                     }
                 }
-            
+            }
             stage('Push to Docker Hub') {
                 steps {
                     script {
