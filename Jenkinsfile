@@ -27,7 +27,7 @@ pipeline {
                     docker build -t hostel-managment-app .
                     docker tag hostel-managment-app ketki123/hostel-managment-app:latest
                     docker push ketki123/hostel-managment-app:latest
-                    '''                          '
+                    '''                      
                         }
                     }
                 }
